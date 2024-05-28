@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/braxlyproject5-php/';
+    public $baseURL = 'http://cevicherias.informaticapp.com/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

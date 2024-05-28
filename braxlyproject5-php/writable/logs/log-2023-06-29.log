@@ -1,0 +1,1587 @@
+ERROR - 2023-06-29 17:46:24 --> mysqli_sql_exception: Unknown column 't.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:46:24 --> Unknown column 't.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'1\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'1\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'1\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:46:31 --> mysqli_sql_exception: Unknown column 't.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('2')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('2')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:46:31 --> Unknown column 't.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'2\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'2\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'2\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('2')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('2')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:46:51 --> mysqli_sql_exception: Unknown column 't.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:46:51 --> Unknown column 't.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:47:19 --> mysqli_sql_exception: Unknown column 't.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:47:19 --> Unknown column 't.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:48:54 --> mysqli_sql_exception: Unknown column 't.tiad_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:48:54 --> Unknown column 't.tiad_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `t`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `t`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `t`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `t`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:49:21 --> mysqli_sql_exception: Unknown column 't.sucu_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:49:21 --> Unknown column 't.sucu_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:49:26 --> mysqli_sql_exception: Unknown column 't.sucu_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:49:26 --> Unknown column 't.sucu_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`tiad_id` = `u`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 17:50:27 --> mysqli_sql_exception: Unknown column 'u.per_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 17:50:27 --> Unknown column 'u.per_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `u`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `u`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `u`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `u`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `u`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `u`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = \'3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `u`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `u`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_id` = :u.usu_id:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(32): App\Models\UsuariosModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 19:07:22 --> Call to undefined method App\Models\UsuariosModel::getPlatos
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Usuarios.php(21): CodeIgniter\Model->__call('getPlatos', [])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:07:43 --> mysqli_sql_exception: Unknown column 't.sucu_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(21): App\Models\UsuariosModel->getUsuarios()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:07:43 --> Unknown column 't.sucu_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `u`.`tiad_id` = `ta`.`tiad_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(21): App\Models\UsuariosModel->getUsuarios()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:31:31 --> mysqli_sql_exception: Unknown column 't.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:31:31 --> Unknown column 't.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_trabajador` `tt` ON `t`.`titra_id` = `tt`.`titra_id`
+JOIN `sucursal` `s` ON `t`.`sucu_id` = `s`.`sucu_id`
+JOIN `personas` `p` ON `t`.`per_id` = `p`.`per_id`
+WHERE `u`.`usu_usuario` = :u.usu_usuario:
+AND `u`.`usu_clave` = :u.usu_clave:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:33:19 --> mysqli_sql_exception: Unknown column 'ta.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:33:19 --> Unknown column 'ta.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = :u.usu_usuario:
+AND `u`.`usu_clave` = :u.usu_clave:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:33:30 --> mysqli_sql_exception: Unknown column 'ta.titra_id' in 'on clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:33:30 --> Unknown column 'ta.titra_id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = \'usuario3\'
+AND `u`.`usu_clave` = \'clave3\'
+AND `u`.`usu_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios` `u`
+JOIN `tipo_admin` `ta` ON `ta`.`titra_id` = `u`.`titra_id`
+JOIN `sucursal` `s` ON `s`.`sucu_id` = `u`.`sucu_id`
+JOIN `empresa` `em` ON `u`.`empr_id` = `em`.`empr_id`
+WHERE `u`.`usu_usuario` = :u.usu_usuario:
+AND `u`.`usu_clave` = :u.usu_clave:
+AND `u`.`usu_estado` = :u.usu_estado:', [...], false)
+ 5 APPPATH/Models/UsuariosModel.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuarios.php(69): App\Models\UsuariosModel->getLogin('usuario3&clave3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->show('usuario3&clave3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:52:11 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:52:11 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:53:47 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:53:47 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 19:54:30 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 19:54:30 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:03:33 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:03:33 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:03:50 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:03:50 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'1\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('1')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('1')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:08:31 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:08:31 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:11:53 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:11:53 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:12:07 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:12:07 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:15:29 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:15:29 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:19:30 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:19:30 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:19:42 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:19:42 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:22:26 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:22:26 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:26:39 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:26:39 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:30:16 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:30:16 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:32:16 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:32:16 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:33:51 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:33:51 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:34:32 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:34:32 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:36:27 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:36:27 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:39:31 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:39:31 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:41:27 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:41:27 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:45:12 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:45:12 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'7\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('7')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('7')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 20:45:24 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 20:45:24 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 22:08:41 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 22:08:41 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-29 22:09:50 --> mysqli_sql_exception: Unknown column 'C.cli_estado' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-29 22:09:50 --> Unknown column 'C.cli_estado' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = \'3\'
+AND `C`.`cli_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes` `c`
+JOIN `personas` `p` ON `c`.`per_id` = `p`.`per_id`
+WHERE `c`.`cli_id` = :c.cli_id:
+AND `C`.`cli_estado` = :C.cli_estado:', [...], false)
+ 5 APPPATH/Models/ClientesModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Clientes.php(62): App\Models\ClientesModel->getId('3')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Clientes->show('3')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

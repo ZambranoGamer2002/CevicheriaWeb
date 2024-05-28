@@ -1,0 +1,58 @@
+ERROR - 2023-11-08 16:04:51 --> mysqli_sql_exception: Unknown column 'clien_correo' in 'field list' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `cl...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cl...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cl...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cl...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Cliente.php(149): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Cliente->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-08 16:04:51 --> Unknown column 'clien_correo' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (:clien_usua_id:, :clien_nombres:, :clien_apellidos:, :clien_foto:, :clien_dni:, :clien_correo:, :clien_celular:, :clien_genero:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Cliente.php(149): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Cliente->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-08 18:45:03 --> mysqli_sql_exception: Unknown column 'clien_correo' in 'field list' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `cl...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cl...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cl...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cl...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Cliente.php(149): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Cliente->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-08 18:45:03 --> Unknown column 'clien_correo' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (\'5\', \'Pedro Pablo\', \'Panduro Lopez\', \'foto1.jpg\', \'76817356\', \'pedro@gmail.com\', \'987787689\', \'Masculino\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cliente` (`clien_usua_id`, `clien_nombres`, `clien_apellidos`, `clien_foto`, `clien_dni`, `clien_correo`, `clien_celular`, `clien_genero`) VALUES (:clien_usua_id:, :clien_nombres:, :clien_apellidos:, :clien_foto:, :clien_dni:, :clien_correo:, :clien_celular:, :clien_genero:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Cliente.php(149): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Cliente->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

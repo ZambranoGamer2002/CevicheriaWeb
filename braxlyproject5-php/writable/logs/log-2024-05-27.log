@@ -1,0 +1,453 @@
+CRITICAL - 2024-05-27 02:13:15 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/cevicherias/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/cevicherias/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 02:42:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'restful'@'localhost' (using password: YES) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 02:42:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 02:42:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'restful'@'localhost' (using password: YES) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('localhost', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 02:42:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 02:44:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', '/home/app/publi...', 174, Array)
+#1 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('app_cevicherias', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('app_cevicherias', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 02:44:58 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 02:45:08 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', '/home/app/publi...', 174, Array)
+#1 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('app_cevicherias', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('app_cevicherias', 'restful', '@restful-', 'database_v', 3306, '', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 02:45:08 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Usuarios.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 02:47:14 --> mysqli_sql_exception: Table 'app_cevicherias.usuario' doesn't exist in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/app/public_html/cevicherias/app/Controllers/Cliente.php(13): CodeIgniter\BaseModel->findAll()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Cliente->index()
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-27 02:47:14 --> Table 'app_cevicherias.usuario' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuario`
+WHERE `usa_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario`
+WHERE `usa_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario`
+WHERE `usa_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `usa_estado` = :usa_estado:', [...], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Cliente.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Cliente->index()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 02:48:04 --> Trying to access array offset on value of type null
+in APPPATH/Views/welcome_message.php on line 57.
+ 1 APPPATH/Views/welcome_message.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/home/app/public_html/cevicherias/app/Views/welcome_message.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/cevicherias/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:30:25 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:30:29 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:43:40 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:44:30 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:44:38 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:47:05 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:47:16 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:48:06 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:50:03 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:50:10 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:52:13 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:55:52 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 04:56:48 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 05:04:54 --> mysqli_sql_exception: Table 'app_cevicherias.usuario' doesn't exist in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuarioModel.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(8): App\Models\UsuarioModel->getUsuario()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 05:04:54 --> Table 'app_cevicherias.usuario' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = :u.usa_estado:', [...], false)
+ 5 APPPATH/Models/UsuarioModel.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuario.php(8): App\Models\UsuarioModel->getUsuario()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-27 05:05:14 --> mysqli_sql_exception: Table 'app_cevicherias.usuario' doesn't exist in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/UsuarioModel.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(8): App\Models\UsuarioModel->getUsuario()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->index()
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-27 05:05:14 --> Table 'app_cevicherias.usuario' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario` `u`
+JOIN `tipo_usuario` `tu` ON `u`.`usa_tipousa_id` = `tu`.`tipousa_id`
+WHERE `u`.`usa_estado` = :u.usa_estado:', [...], false)
+ 5 APPPATH/Models/UsuarioModel.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Usuario.php(8): App\Models\UsuarioModel->getUsuario()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 05:05:23 --> "int" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 320.
+ 1 SYSTEMPATH/Validation/Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('int')
+ 2 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('tiad_id', 'tiad_id', '2', [...], [...])
+ 3 APPPATH/Controllers/Usuarios.php(44): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuarios->create()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

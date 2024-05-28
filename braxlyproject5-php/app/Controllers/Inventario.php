@@ -256,7 +256,7 @@ class Inventario extends Controller{
         $validation = \Config\Services::validation();
         $headers = $request -> getHeaders();
         $model = new RegistrosModel();
-        $registro = $model -> where('estado', 1) -> findAll();
+        $registro = $model -> where('reg_estado', 1) -> findAll();
         
         foreach($registro as $key => $value){
             if(array_key_exists('Authorization', $headers) && !empty($headers['Authorization'])){

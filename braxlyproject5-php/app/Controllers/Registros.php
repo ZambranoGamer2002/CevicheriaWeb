@@ -27,6 +27,49 @@ class Registros extends Controller{
 
     }
 
+    public function show($id){
+        $request = \Config\Services::request();
+        $validation = \Config\Services::validation();
+        $headers = $request -> getHeaders();
+        $model = new RegistrosModel();
+        $registro = $model -> where('reg_estado', 1) -> findAll();
+        
+        foreach($registro as $key => $value){
+            if(array_key_exists('Authorization', $headers) && !empty($headers['Authorization'])){
+                
+                if($request -> getHeader('Authorization') == 'Authorization: Basic '
+                .base64_encode($value['reg_clientes_id'].':'.$value['reg_llave_secreta'])){
+                    $model = new RegistrosModel();
+                    $registro = $model -> getId($id);
+                    //var_dump($curso); die;
+                    if(!empty($registro)){
+                        $data = array(
+                            "Status" => 200,
+                            "Detalle" => $registro
+                        );
+                    }else{
+                        $data = array(
+                            "Status" => 404,
+                            "Detalles" => "No hay registros"
+                        );
+                    }
+                    return json_encode($data, true);
+                }else{
+                    $data = array(
+                        "Status" => 404,
+                        "Detalles" => "El token es incorrecto"
+                    );
+                }
+            }else{
+                $data = array(
+                    "Status" => 404,
+                    "Detalles" => "No posee autorización"
+                );
+            }    
+        }
+        return json_encode($data, true);
+    }
+
     public function create(){
         $request = \Config\Services::request();
         $validation = \Config\Services::validation();

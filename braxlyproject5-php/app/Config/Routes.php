@@ -30,7 +30,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/registros', 'Registros::vista');
+//$routes->get('/registros', 'Registros::vista');
 $routes->get('/admin', 'Admin::vista');
 
 $routes -> resource('admin');
@@ -43,7 +43,7 @@ $routes -> resource('sucursal');//check
 $routes -> resource('platos');//check
 $routes -> resource('reclamos');//check
 $routes -> resource('pedidos'); //check
-$routes -> resource('detallepedido');//check
+$routes -> resource('DetallePedido');//check
 $routes -> resource('clientes');//check
 $routes -> resource('personas');//check
 $routes -> resource('trabajadores');//check

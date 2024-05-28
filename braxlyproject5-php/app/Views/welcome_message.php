@@ -3,7 +3,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'http://localhost:8080/braxlyproject5-php/registros',
+			CURLOPT_URL => 'https://cevicherias.informaticapp.com/registros',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

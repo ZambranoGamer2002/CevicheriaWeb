@@ -1,0 +1,204 @@
+CRITICAL - 2023-11-15 00:12:11 --> Class 'App\Controllers\PlatoModel' not found
+in APPPATH/Controllers/Plato.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Plato->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Plato))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 00:42:36 --> mysqli_sql_exception: Unknown column 'p.prod_id' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/PlatoModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Plato.php(64): App\Models\PlatoModel->getId('2')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Plato->show('2')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Plato))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-15 00:42:36 --> Unknown column 'p.prod_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = :p.prod_id:
+AND `p`.`plato_estado` = :p.plato_estado:', [...], false)
+ 5 APPPATH/Models/PlatoModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Plato.php(64): App\Models\PlatoModel->getId('2')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Plato->show('2')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Plato))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 00:42:57 --> mysqli_sql_exception: Unknown column 'p.prod_id' in 'where clause' in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/app/public_html/cevicherias/app/Models/PlatoModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/app/public_html/cevicherias/app/Controllers/Plato.php(64): App\Models\PlatoModel->getId('2')
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Plato->show('2')
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Plato))
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-15 00:42:57 --> Unknown column 'p.prod_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = \'2\'
+AND `p`.`plato_estado` = 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `plato` `p`
+JOIN `tipo_plato` `tp` ON `tp`.`tipoplato_id` = `p`.`plato_tipoplato_id`
+WHERE `p`.`prod_id` = :p.prod_id:
+AND `p`.`plato_estado` = :p.plato_estado:', [...], false)
+ 5 APPPATH/Models/PlatoModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Plato.php(64): App\Models\PlatoModel->getId('2')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Plato->show('2')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Plato))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 18:59:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(91): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-15 18:59:03 --> Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (:usa_tipousa_id:, :usa_usanombre:, :usa_contra:, :usa_llave_secreta:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Usuario.php(91): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 18:59:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(91): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-15 18:59:03 --> Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (:usa_tipousa_id:, :usa_usanombre:, :usa_contra:, :usa_llave_secreta:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Usuario.php(91): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 18:59:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(91): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-15 18:59:03 --> Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (:usa_tipousa_id:, :usa_usanombre:, :usa_contra:, :usa_llave_secreta:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Usuario.php(91): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-15 18:59:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE) in /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /home/app/public_html/cevicherias/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /home/app/public_html/cevicherias/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /home/app/public_html/cevicherias/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/app/public_html/cevicherias/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /home/app/public_html/cevicherias/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/app/public_html/cevicherias/app/Controllers/Usuario.php(91): CodeIgniter\Model->insert(Array)
+#8 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Usuario->create()
+#9 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-15 18:59:04 --> Cannot add or update a child row: a foreign key constraint fails (`app_cevicherias`.`usuario`, CONSTRAINT `fk_usuario_tipo_usuario` FOREIGN KEY (`usa_tipousa_id`) REFERENCES `tipo_usuario` (`tipousa_id`) ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (\'5\', \'rasha\', \'123\', \'o2ao07odfhdfrexfhgdfhdferttgeRzNPC.BDThVYRhDkbDos5YLCeR.6s7y\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`usa_tipousa_id`, `usa_usanombre`, `usa_contra`, `usa_llave_secreta`) VALUES (:usa_tipousa_id:, :usa_usanombre:, :usa_contra:, :usa_llave_secreta:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Usuario.php(91): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Usuario->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

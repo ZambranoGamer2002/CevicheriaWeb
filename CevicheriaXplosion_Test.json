@@ -1,0 +1,2126 @@
+{
+	"info": {
+		"_postman_id": "9d156e0a-4f7a-4636-a3e1-4fd2eb059f5e",
+		"name": "CevicheriaXplosion-",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26982870"
+	},
+	"item": [
+		{
+			"name": "Platos",
+			"item": [
+				{
+					"name": "Platos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/platos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"platos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Platos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tenga un estado 200 (Created)\r",
+									"pm.test(\"Estado de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta no está vacía\r",
+									"pm.test(\"La respuesta no está vacía\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"// Verificar que el contenido de la respuesta es en formato JSON\r",
+									"pm.test(\"La respuesta es en formato JSON\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"// Parsear la respuesta JSON\r",
+									"let jsonData;\r",
+									"try {\r",
+									"    jsonData = pm.response.json();\r",
+									"} catch (e) {\r",
+									"    console.error(\"Error al parsear la respuesta JSON: \", e);\r",
+									"    pm.test(\"La respuesta es JSON válida\", function () {\r",
+									"        throw new Error(\"La respuesta no es un JSON válido\");\r",
+									"    });\r",
+									"}\r",
+									"\r",
+									"// Verificar que la respuesta contiene los datos del plato creado\r",
+									"pm.test(\"La respuesta contiene los datos del plato creado\", function () {\r",
+									"    pm.expect(jsonData).to.have.property('pla_id');\r",
+									"    pm.expect(jsonData).to.have.property('pla_comida', 'Nombre del plato');\r",
+									"    pm.expect(jsonData).to.have.property('pla_precio', 'Precio del plato');\r",
+									"    pm.expect(jsonData).to.have.property('pla_descrip', 'Descripción del plato');\r",
+									"    pm.expect(jsonData).to.have.property('tico_id', 'ID del tipo de comida');\r",
+									"    pm.expect(jsonData).to.have.property('sucu_id', 'ID de la sucursal');\r",
+									"});\r",
+									"\r",
+									"// Imprimir la estructura de la respuesta para debug\r",
+									"console.log(jsonData);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeYSpGUvaEZqTQ9.Ewk5mUAJdaFM05epi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeAS443GwGLj5Ro/tHJQHCrLwRTIBHPDW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pla_comida\": \"Pruebas\",\r\n    \"pla_precio\": \"10.00\",\r\n    \"pla_descrip\": \"Lanzado registrar platos\",\r\n    \"tico_id\": \"1\",\r\n    \"sucu_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/platos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"platos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Platos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/platos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"platos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Platos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tenga un estado 200\r",
+									"pm.test(\"Estado de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta no está vacía\r",
+									"pm.test(\"La respuesta no está vacía\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"// Verificar que el contenido de la respuesta es en formato JSON\r",
+									"pm.test(\"La respuesta es en formato JSON\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"// Parsear la respuesta JSON\r",
+									"let jsonData;\r",
+									"try {\r",
+									"    jsonData = pm.response.json();\r",
+									"} catch (e) {\r",
+									"    console.error(\"Error al parsear la respuesta JSON: \", e);\r",
+									"    pm.test(\"La respuesta es JSON válida\", function () {\r",
+									"        throw new Error(\"La respuesta no es un JSON válido\");\r",
+									"    });\r",
+									"}\r",
+									"\r",
+									"// Verificar que la respuesta contiene un mensaje de éxito o confirmación\r",
+									"pm.test(\"La respuesta contiene un mensaje de éxito\", function () {\r",
+									"    pm.expect(jsonData).to.have.property('mensaje', 'Plato eliminado exitosamente');\r",
+									"});\r",
+									"\r",
+									"// Imprimir la estructura de la respuesta para debug\r",
+									"console.log(jsonData);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeYSpGUvaEZqTQ9.Ewk5mUAJdaFM05epi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeAS443GwGLj5Ro/tHJQHCrLwRTIBHPDW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/platos/9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"platos",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "ListarPedidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que el estado de la respuesta es 200\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta contiene el campo \"Total de registros\"\r",
+									"pm.test(\"Response has total records\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('Total de registros');\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta contiene el campo \"Detalle\"\r",
+									"pm.test(\"Response has detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('Detalle');\r",
+									"});\r",
+									"\r",
+									"// Verificar que hay al menos un pedido en \"Detalle\"\r",
+									"pm.test(\"Detalle has at least one pedido\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Detalle.length).to.be.above(0);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/pedidos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tiene un código de estado 201 (Created)\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar si la respuesta es JSON o HTML\r",
+									"pm.test(\"Respuesta es JSON o HTML\", function () {\r",
+									"    var contentType = pm.response.headers.get('Content-Type');\r",
+									"    pm.expect(contentType).to.be.oneOf(['application/json', 'text/html; charset=UTF-8']);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body is not empty\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ped_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ped_num_pedido",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ped_tipo_compra",
+									"value": "Consumo en el local",
+									"type": "text"
+								},
+								{
+									"key": "ped_estado_pedido",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ped_detalles",
+									"value": "Guarniciones:platano frito",
+									"type": "text"
+								},
+								{
+									"key": "pla_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cli_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ped_estado",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pla_comida",
+									"value": "Ceviche de pescado",
+									"type": "text"
+								},
+								{
+									"key": "pla_precio",
+									"value": "30.00",
+									"type": "text"
+								},
+								{
+									"key": "pla_descrip",
+									"value": "Pescado, sal, limon y ajies. Emblema de nuestra cocina peruana",
+									"type": "text"
+								},
+								{
+									"key": "tico_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sucu_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pla_estado",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "per_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cli_estado",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Fixed typo in property name 'Detalle' to 'Detalle'\r",
+									"pm.test(\"Estado de respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta tiene el campo Detalles\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El detalle indica 'Datos actualizados'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Datos actualizados\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/pedidos/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que el estado de la respuesta es 200 o 204\r",
+									"pm.test(\"Status code is 200 or 204\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta es un JSON válido (si se espera una respuesta JSON)\r",
+									"pm.test(\"Respuesta es un JSON válido (si aplica)\", function () {\r",
+									"    if (pm.response.code === 200) {\r",
+									"        pm.expect(function () {\r",
+									"            JSON.parse(pm.response.text());\r",
+									"        }).not.to.throw();\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta contiene un mensaje de confirmación (si se espera un mensaje)\r",
+									"pm.test(\"Respuesta tiene el campo Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El detalle indica 'Se ha eliminado el registro'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Se ha eliminado el registro\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/pedidos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registrar",
+			"item": [
+				{
+					"name": "Registros",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tiene un código de estado 200\r",
+									"pm.test(\"Estado de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar si la respuesta es JSON o HTML\r",
+									"pm.test(\"Respuesta es JSON o HTML\", function () {\r",
+									"    var contentType = pm.response.headers.get('Content-Type');\r",
+									"    pm.expect(contentType).to.be.oneOf(['application/json', 'text/html; charset=UTF-8']);\r",
+									"});\r",
+									"\r",
+									"// Verificar la estructura de la respuesta\r",
+									"pm.test(\"La respuesta contiene una lista de registros\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/registros",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"registros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tiene un código de estado 201 (Created)\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"let jsonData = pm.response.json();\r",
+									"if(jsonData){\r",
+									"    var reg_nombres = jsonData;\r",
+									"\r",
+									"    pm.collectionVariables.get(\"reg_nombres\", reg_nombres);\r",
+									"} else {\r",
+									"    console.log(\"no se encontro respuesta\")\r",
+									"}\r",
+									"\r",
+									"// Verificar si la respuesta es JSON o HTML\r",
+									"pm.test(\"Respuesta es JSON o HTML\", function () {\r",
+									"    var contentType = pm.response.headers.get('Content-Type');\r",
+									"    pm.expect(contentType).to.be.oneOf(['application/json', 'text/html; charset=UTF-8']);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body is not empty\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reg_nombres\": \"Jose Ulises\",\r\n    \"reg_apellidos\": \"Zambrano Panduro\",\r\n    \"reg_email\": \"jose.zambrano@upeu.edu.pe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/registros",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"registros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tiene un código de estado 200 (OK)\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar si la respuesta es JSON o HTML\r",
+									"pm.test(\"Respuesta es JSON o HTML\", function () {\r",
+									"    var contentType = pm.response.headers.get('Content-Type');\r",
+									"    pm.expect(contentType).to.be.oneOf(['application/json', 'text/html; charset=UTF-8']);\r",
+									"});\r",
+									"\r",
+									"// Verificar que el tiempo de respuesta es menor a 500ms\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"// Verificar que el cuerpo de la respuesta no está vacío\r",
+									"pm.test(\"Response body is not empty\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeYSpGUvaEZqTQ9.Ewk5mUAJdaFM05epi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeAS443GwGLj5Ro/tHJQHCrLwRTIBHPDW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuarios",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Script\r",
+									"pm.test(\"La solicitud fue exitosa\", function () {\r",
+									"    pm.response.to.have.status(200); // Cambia a 200 o al código correcto si no es 201\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La respuesta es en formato JSON\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El tiempo de respuesta es menor a 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"packages": {},
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeYSpGUvaEZqTQ9.Ewk5mUAJdaFM05epi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeAS443GwGLj5Ro/tHJQHCrLwRTIBHPDW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usu_nombres\": \"Subiendo\",\r\n    \"usu_apellidos\": \"Prueba\",\r\n    \"tiad_id\": \"1\",\r\n    \"empr_id\": \"1\",\r\n    \"sucu_id\": \"1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/usuarios",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proveedores",
+			"item": [
+				{
+					"name": "Listar proveedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Estado de respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta tiene el campo Total de registros\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Total de registros\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La respuesta tiene el campo Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar estructura de cada invetario en Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.Detalle.forEach(function(proveedores) {\r",
+									"        pm.expect(proveedores).to.have.property(\"prov_id\");\r",
+									"        pm.expect(proveedores).to.have.property(\"prov_nombre\");\r",
+									"        pm.expect(proveedores).to.have.property(\"prov_direccion\");\r",
+									"        pm.expect(proveedores).to.have.property(\"prov_telefono\");\r",
+									"        pm.expect(proveedores).to.have.property(\"prov_estado\");\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/proveedores",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"proveedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear proveedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"La respuesta debe ser JSON\", function() {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json; // Verifica que la respuesta es JSON\r",
+									"});\r",
+									"\r",
+									"try {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Verificar el estado HTTP de la respuesta\r",
+									"    pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"\r",
+									"    // Verificar el contenido de la respuesta\r",
+									"    pm.test(\"El mensaje de detalle es 'Registro existoso'\", function () {\r",
+									"        pm.expect(jsonData.Detalle).to.eql(\"Registro existoso\");\r",
+									"    });\r",
+									"\r",
+									"} catch (e) {\r",
+									"    console.log(\"La respuesta no es un JSON válido:\", e);\r",
+									"    pm.test(\"Error en la respuesta\", function() {\r",
+									"        throw new Error(\"La respuesta no es un JSON válido. Detalles: \" + e.message);\r",
+									"    });\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "prov_nombre",
+									"value": "Etham Group",
+									"type": "text"
+								},
+								{
+									"key": "prov_direccion",
+									"value": "Jr. Atumpampa",
+									"type": "text"
+								},
+								{
+									"key": "prov_telefono",
+									"value": "455120941",
+									"type": "text"
+								},
+								{
+									"key": "prov_estado",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/proveedores",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"proveedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar proveedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Datos actualizados'\", function () {\r",
+									"    pm.expect(jsonData.Detalles).to.eql(\"Datos actualizados\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prov_nombre",
+									"value": "Etham Group",
+									"type": "text"
+								},
+								{
+									"key": "prov_direccion",
+									"value": "Jr. Rioja",
+									"type": "text"
+								},
+								{
+									"key": "prov_telefono",
+									"value": "455120941",
+									"type": "text"
+								},
+								{
+									"key": "prov_estado",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/proveedores/6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"proveedores",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar proveedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Se ha eliminado el registro'\", function () {\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Se ha eliminado el registro\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/proveedores/6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"proveedores",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursal",
+			"item": [
+				{
+					"name": "Listar sucursal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Estado de respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta tiene el campo Total de registros\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Total de registros\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La respuesta tiene el campo Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar estructura de cada sucursal en Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.Detalle.forEach(function(sucursal) {\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_id\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_nombre\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_direccion\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_telefono\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_departamento\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_provincia\");\r",
+									"        pm.expect(sucursal).to.have.property(\"empr_id\");\r",
+									"        pm.expect(sucursal).to.have.property(\"sucu_estado\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/sucursal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sucursal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear sucursal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"La respuesta debe ser JSON\", function() {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json; // Verifica que la respuesta es JSON\r",
+									"});\r",
+									"\r",
+									"try {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Verificar el estado HTTP de la respuesta\r",
+									"    pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"\r",
+									"    // Verificar el contenido de la respuesta\r",
+									"    pm.test(\"El mensaje de detalle es 'Registro existoso'\", function () {\r",
+									"        pm.expect(jsonData.Detalle).to.eql(\"Registro existoso\");\r",
+									"    });\r",
+									"\r",
+									"} catch (e) {\r",
+									"    console.log(\"La respuesta no es un JSON válido:\", e);\r",
+									"    pm.test(\"Error en la respuesta\", function() {\r",
+									"        throw new Error(\"La respuesta no es un JSON válido. Detalles: \" + e.message);\r",
+									"    });\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sucu_nombre",
+									"value": "Rinconcito Conchita - Tarapoto",
+									"type": "text"
+								},
+								{
+									"key": "sucu_direccion",
+									"value": "Jr. Ayacucho",
+									"type": "text"
+								},
+								{
+									"key": "sucu_telefono",
+									"value": "987594798",
+									"type": "text"
+								},
+								{
+									"key": "sucu_departamento",
+									"value": "San Martin",
+									"type": "text"
+								},
+								{
+									"key": "sucu_provincia",
+									"value": "Lamas",
+									"type": "text"
+								},
+								{
+									"key": "empr_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/sucursal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sucursal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Sucursal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Datos actualizados'\", function () {\r",
+									"    pm.expect(jsonData.Detalles).to.eql(\"Datos actualizados\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sucu_nombre",
+									"value": "Rinconcito Conchita - Morales",
+									"type": "text"
+								},
+								{
+									"key": "sucu_direccion",
+									"value": "Jr. Ayacucho",
+									"type": "text"
+								},
+								{
+									"key": "sucu_telefono",
+									"value": "987594798",
+									"type": "text"
+								},
+								{
+									"key": "sucu_departamento",
+									"value": "San Martin",
+									"type": "text"
+								},
+								{
+									"key": "sucu_provincia",
+									"value": "Lamas",
+									"type": "text"
+								},
+								{
+									"key": "empr_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/sucursal/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sucursal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Sucursal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Se ha eliminado el registro'\", function () {\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Se ha eliminado el registro\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/sucursal/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sucursal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventario",
+			"item": [
+				{
+					"name": "Listar inventario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Estado de respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta tiene el campo Total de registros\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Total de registros\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La respuesta tiene el campo Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar estructura de cada invetario en Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.Detalle.forEach(function(inventario) {\r",
+									"        pm.expect(inventario).to.have.property(\"inv_id\");\r",
+									"        pm.expect(inventario).to.have.property(\"prod_id\");\r",
+									"        pm.expect(inventario).to.have.property(\"prov_id\");\r",
+									"        pm.expect(inventario).to.have.property(\"inv_tipo_movimiento\");\r",
+									"        pm.expect(inventario).to.have.property(\"inv_cantidad\");\r",
+									"        pm.expect(inventario).to.have.property(\"inv_fecha_ing\");\r",
+									"        pm.expect(inventario).to.have.property(\"inv_fecha_vencimiento\");\r",
+									"        pm.expect(inventario).to.have.property(\"sucu_id\");\r",
+									"        pm.expect(inventario).to.have.property(\"inv_estado\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/inventario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"inventario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Inventario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"La respuesta debe ser JSON\", function() {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json; // Verifica que la respuesta es JSON\r",
+									"});\r",
+									"\r",
+									"try {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Verificar el estado HTTP de la respuesta\r",
+									"    pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"\r",
+									"    // Verificar el contenido de la respuesta\r",
+									"    pm.test(\"El mensaje de detalle es 'Registro existoso'\", function () {\r",
+									"        pm.expect(jsonData.Detalle).to.eql(\"Registro existoso\");\r",
+									"    });\r",
+									"\r",
+									"} catch (e) {\r",
+									"    console.log(\"La respuesta no es un JSON válido:\", e);\r",
+									"    pm.test(\"Error en la respuesta\", function() {\r",
+									"        throw new Error(\"La respuesta no es un JSON válido. Detalles: \" + e.message);\r",
+									"    });\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "prov_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "prov_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inv_tipo_movimiento",
+									"value": "Ingreso",
+									"type": "text"
+								},
+								{
+									"key": "inv_cantidad",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "inv_fecha_ing",
+									"value": "2023-05-28",
+									"type": "text"
+								},
+								{
+									"key": "inv_fecha_vencimiento",
+									"value": "2024-05-28",
+									"type": "text"
+								},
+								{
+									"key": "sucu_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inv_estado",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/inventario",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"inventario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar inventario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Datos actualizados'\", function () {\r",
+									"    pm.expect(jsonData.Detalles).to.eql(\"Datos actualizados\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "prov_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "prov_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inv_tipo_movimiento",
+									"value": "Ingreso",
+									"type": "text"
+								},
+								{
+									"key": "inv_cantidad",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "inv_fecha_ing",
+									"value": "2023-05-28",
+									"type": "text"
+								},
+								{
+									"key": "inv_fecha_vencimiento",
+									"value": "2024-05-28",
+									"type": "text"
+								},
+								{
+									"key": "sucu_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inv_estado",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/inventario/10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"inventario",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar inventario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Obtener la respuesta en formato JSON\r",
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"// Verificar el estado HTTP de la respuesta\r",
+									"pm.test(\"El status de la respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar el contenido de la respuesta\r",
+									"pm.test(\"El mensaje de detalle es 'Se ha eliminado el registro'\", function () {\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Se ha eliminado el registro\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/inventario/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"inventario",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetallePedido",
+			"item": [
+				{
+					"name": "ListarTipoPedidos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}/DetallePedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"DetallePedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetallePedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que la respuesta tiene un código de estado 201 (Created)\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Verificar si la respuesta es JSON o HTML\r",
+									"pm.test(\"Respuesta es JSON o HTML\", function () {\r",
+									"    var contentType = pm.response.headers.get('Content-Type');\r",
+									"    pm.expect(contentType).to.be.oneOf(['application/json', 'text/html; charset=UTF-8']);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body is not empty\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ped_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "depe_estado",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "depe_fecha",
+									"value": "2024-05-27",
+									"type": "text"
+								},
+								{
+									"key": "tipa_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "depe_num_mesa",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "deco_info_compra",
+									"value": "Mesa reservada",
+									"type": "text"
+								},
+								{
+									"key": "tra_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ticon_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "depe_estado",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/DetallePedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"DetallePedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetallePedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Fixed typo in property name 'Detalle' to 'Detalle'\r",
+									"pm.test(\"Estado de respuesta es 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta tiene el campo Detalles\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El detalle indica 'Datos actualizados'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Datos actualizados\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/DetallePedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"DetallePedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetallePedido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Verificar que el estado de la respuesta es 200 o 204\r",
+									"pm.test(\"Status code is 200 or 204\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta es un JSON válido (si se espera una respuesta JSON)\r",
+									"pm.test(\"Respuesta es un JSON válido (si aplica)\", function () {\r",
+									"    if (pm.response.code === 200) {\r",
+									"        pm.expect(function () {\r",
+									"            JSON.parse(pm.response.text());\r",
+									"        }).not.to.throw();\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"// Verificar que la respuesta contiene un mensaje de confirmación (si se espera un mensaje)\r",
+									"pm.test(\"Respuesta tiene el campo Detalle\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"Detalle\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El detalle indica 'Se ha eliminado el registro'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Detalle).to.eql(\"Se ha eliminado el registro\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "o2ao07odfhdfrexfhgdfhdferttgeHgk7T5uk04hkXSu0oFbgAdVwvLRmkvu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "a2aa07adfhdfrexfhgdfhdferttgeVaTUezA8T.HF3knVN6KQ5LK0RsSpsKO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/DetallePedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"DetallePedido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

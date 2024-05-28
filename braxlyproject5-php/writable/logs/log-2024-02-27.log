@@ -1,0 +1,35 @@
+CRITICAL - 2024-02-27 18:44:16 --> Undefined index: reg_nombres
+in APPPATH/Views/welcome_message.php on line 15.
+ 1 APPPATH/Views/welcome_message.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: reg_nombres', '/home/app/public_html/cevicherias/app/Views/welcome_message.php', 15, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/home/app/public_html/cevicherias/app/Views/welcome_message.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 18:44:16 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in /home/app/public_html/cevicherias/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /home/app/public_html/cevicherias/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /home/app/public_html/cevicherias/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /home/app/public_html/cevicherias/system/API/ResponseTrait.php(101): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /home/app/public_html/cevicherias/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined index: reg_nombres
+#0 /home/app/public_html/cevicherias/app/Views/welcome_message.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/app/publi...', 15, Array)
+#1 /home/app/public_html/cevicherias/system/View/View.php(213): include('/home/app/publi...')
+#2 /home/app/public_html/cevicherias/system/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/app/public_html/cevicherias/system/Common.php(1184): CodeIgniter\View\View->render('welcome_message', Array, true)
+#4 /home/app/public_html/cevicherias/app/Controllers/Home.php(9): view('welcome_message')
+#5 /home/app/public_html/cevicherias/system/CodeIgniter.php(934): App\Controllers\Home->index()
+#6 /home/app/public_html/cevicherias/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /home/app/public_html/cevicherias/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/app/public_html/cevicherias/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
